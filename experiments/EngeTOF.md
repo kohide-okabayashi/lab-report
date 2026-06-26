@@ -15,8 +15,6 @@
 
 - データと解析コード:/data/Users/okabayashi/mine/
 
-- うんちいいい
-
 ## 2. 実行コマンド
 ```bash
 # 例
