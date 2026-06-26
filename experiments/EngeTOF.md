@@ -1,4 +1,4 @@
-# 実験名: <EngeTOF>
+# 実験名: EngeTOF
 
 - 日付: YYYY-MM-DD
 - 担当: <岡林虎秀>
