@@ -24,13 +24,15 @@
 - 解析コード:/data/Users/okabayashi/mine/calib4.cc
 
 ## 3. 結果
-- 以下のようなTOF時間幅が得られた。（etoftest2026_run_47_calude_tof_resolutin.pdfを確認）
+- 以下のようなTOF時間幅が得られた。
   - $\sigma_{TOF_{1X4-2X4}}^2 = 162ps
   - $\sigma_{TOF_{1X4-2X5}}^2 = 171ps
   - $\sigma_{TOF_{1X5-2X4}}^2 = 206ps
   - $\sigma_{TOF_{1X5-2X5}}^2 = 159ps
 - 整合性を確認すると明らかにおかしい。なんでや。
-  - $\sigma_{1X5}^2 - \sigma_{1X4}^2 = 206^2 - 162^2 = 159^2 - 171^2$ 
+  - $\sigma_{1X5}^2 - \sigma_{1X4}^2 = 206^2 - 162^2 = 159^2 - 171^2$
+![TOF時間幅（横軸はns）](images/etoftest2026_run_47_tof_resolution.pdf)
+![補正によるadc-adc分布の変化](images/etoftest2026_run_47_timewalk.pdf)
 
 ## 4. 考察
 - 1X5-2X4:{4,5,10,11}の組み合わせだけ元の分解能が悪すぎたりデータ数が半分以下しかなかったりと怪しい。ここが160psくらいまで抑えられれば上の話も辻褄が合う、、？本当は上の式が0になってくれると「上段と下段それぞれで分解が一緒」という過程が信憑性を増すわけだが、、、
