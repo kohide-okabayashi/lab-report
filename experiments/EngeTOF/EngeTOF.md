@@ -31,7 +31,9 @@
   - $\sigma_{TOF_{1X5-2X5}}^2 = 159ps
 - 整合性を確認すると明らかにおかしい。なんでや。
   - $\sigma_{1X5}^2 - \sigma_{1X4}^2 = 206^2 - 162^2 = 159^2 - 171^2$
+
 ![TOF時間幅（横軸はns）](images/etoftest2026_run_47_tof_resolution.pdf)
+
 ![補正によるadc-adc分布の変化](images/etoftest2026_run_47_timewalk.pdf)
 
 ## 4. 考察
