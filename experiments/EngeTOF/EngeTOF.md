@@ -68,19 +68,28 @@
     
 ## 3. 結果
 - 以下のようなTOF時間幅が得られた。
-  - $\sigma_{TOF_{1X4-2X4}} = 162ps$
-  - $\sigma_{TOF_{1X4-2X5}} = 171ps$
-  - $\sigma_{TOF_{1X5-2X4}} = 206ps$
-  - $\sigma_{TOF_{1X5-2X5}} = 159ps$
+  - $\sigma_{TOF_{1X4-2X4}} = 161ps$
+  - $\sigma_{TOF_{1X4-2X5}} = 168ps$
+  - $\sigma_{TOF_{1X5-2X4}} = 185ps$
+  - $\sigma_{TOF_{1X5-2X5}} = 151ps$
 
 *図1. TOF時間幅（横軸はns）*
 
-![TOF時間幅（横軸はns）](images/etoftest2026_run_47_tof_resolution.png)
+![TOF時間幅（横軸はns）](images/etoftest2026_run_47_tof_resolution_0630.png)
 
 *図2. 補正によるadc-tof分布の変化*
 
-![補正によるadc-adc分布の変化](images/etoftest2026_run_47_tof_adc_raw.png)
-![補正によるadc-adc分布の変化](images/etoftest2026_run_47_tof_adc_corr.png)
+![補正によるadc-adc分布の変化](images/etoftest2026_run_47_tof_adc_raw_0630.png)
+![補正によるadc-adc分布の変化](images/etoftest2026_run_47_tof_adc_corr_0630.png)
 
+## 4. 考察
+- 補正後でも若干のテールの広がり、2ピークあるように感じる
+  -  Gussianのfitをみるとテールの影響は受けてなさそうだから分解能の値に対しては問題はないけどもね、、、
+  -  cut条件を見直さないとね
+- 結局各シンチの分解能はどう出すの？
+  - ETOFをまぜると？
+- 関数を$`\frac{c_1}{(ADC - C_2)^{C_3}}`$にしてfittingしてみる
+- adcの0なるデータ多くね？
+- tdcピークが分かれてる理由
 
 
