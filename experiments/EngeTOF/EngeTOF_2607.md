@@ -11,7 +11,7 @@
 - 【NEW】Cut条件を変えた
     - ETOFの中心を垂直に通ったようなイベントを抽出（図のうち、両方の軸で-1~1の間の領域のデータのみを抽出）
       
-![TOF vs ADC](images/calib10_etoftest2026_run_47_hPair.png)
+![E1の発光時間差およびE2の発光時間差](images/calib10_etoftest2026_run_47_hPair.png)
 
 
 ## 2. 実行
@@ -84,7 +84,7 @@
 - このシミュレーションを様々な $'\sigma_{enge}'$ の値に対してたくさん（100,000回）行う -> 中心極限定理よりそれぞれの $'\sigma_{enge}'$ に対して得られる100,000個の推定寿命の分布は真値を中心としたガウシアンになる。 -> こいつの幅ができるだけ狭ければ良い。
 
 ## 3. 結果
-パラメーターはこんな感じ。
+- パラメーター
 
  ```
 # --- 1. パラメータ ---
@@ -93,13 +93,17 @@ sigma_hks = 60.0       # HKSの時間分解能 [ps]
 N_events = 1000        # 取得予定のイベント数
 offset = 0.0           # ガウシアンの時間オフセット [ps]
 N_roop = 100000        # ループ回数
-
 list_sigma_enge = np.arange(0, 301, 10)  # Engeの時間分解能 [ps]のリスト
 ```
 
-出力結果はこんな感じ。
+- engeの時間分解能を変化させたときの、推定寿命はこれほどばらつく。
+  - 体感として、 $'\sigma_{enge}'$ が100psぐらいだと265±25.0[ps]みたいな推定結果になることはよくあった。
 
-![Estimated Lifetime Uncertainty vs Enge Time Resolution](images/???.png)
+![Estimated Lifetime Uncertainty vs Enge Time Resolution](images/EngeTOF_2607/test_sigma_enge.png)
+
+## 4. 考察
+- 25psくらいのばらつきまで許容できるとすれば、確かに100psくらいに抑えないといけない。
+- HKSの60psが割と効いてきてる
 
 
 
